@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="estiloEmpresa.css">
+    <script src="jquery/jquery-3.6.0.min.js"></script>    
+    <script src="jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="imgsFormEmpresa/6095215353a8bf00040ff3a6.png" alt=""> 
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"> <a href="inicio.html" class="nav-link">Home</a></li>
+                </ul>
+            </div>
+            <div class="login-button"><button><a href="login.html">Entrar</a></button>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class ="icon" src="imgsFormEmpresa/logio.png"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"> <a href="inicio.html" class="nav-link">Home</a></li>
+            </ul>         
+         <div class="login-button"><button><a href="login.html">Entrar</a></button>
+        </div>
+        </div>    
+    </header>
+    <form>
+   
+    <p>Nome        
+    </p>
+    <p>
+        <input type="text" name="Nome" id="txtNome" placeholder="Digite seu Nome">
+    </p>
+    
+    <p>Ano de nascimento
+    </p>
+    <p>
+        <select number="Nasc" id="selectNasc">
+            <option value="false"></option>
+            <script>
+                for(ano=1900;ano<=2022;ano++){
+                document.write("<option value="+ano+">"+ano+"</option>");
+                }
+            </script>
+
+        </select>
+    </p>
+    <p>PCD  </p>
+    <p>
+        <input type="radio" name="habilitado" id="radioHabilitadoSim" value="s">
+        <label for="radioHabilitadoSim">Sim</label>
+    </p>
+    <p>
+        <input type="radio" name="habilitado" id="radioHabilitadoNao" value="n">
+        <label for="radioHabilitadoNao">Não</label>
+    </p>
+    <p>Período de Estudos
+    </p>
+    <p>
+        <input type="checkbox" name="periodo[]" id="radioPeriodoManha" value="Manha">
+        <label for="radioPeriodoManha">Manhã</label>
+    </p>
+    <p>
+        <input type="checkbox" name="periodo[]" id="radioPeriodoTarde" value="Tarde">
+        <label for="radioPeriodoTarde">Tarde</label>
+    </p>
+    <p>
+        <input type="checkbox" name="periodo[]" id="radioPeriodoNoite" value="Noite">
+        <label for="radioPeriodoNoite">Noite</label>
+    </p>
+    <p>
+        <input type="checkbox" name="periodo[]" id="radioPeriodoManha" value="Manha">
+        <label for="radioPeriodoManha">Não Estudo(a)</label>
+    </p>
+    <p>Telefone
+    </p>
+    <p><input type="text" name="txtTelefone" id="" class="txtTelefone"></p>
+    <p>CPF
+    </p>
+    <p><input type="text" name="txtCPF" id="" class="txtCPF"></p>
+    <p>CEP
+    </p>
+    <p><input type="text" name="txtCEP" id="" class="txtCEP"></p>
+
+    <p>Objetivos</p>
+    <textarea name="Objetivos" is="" style="width: 453px; height: 127px;" ></textarea>
+        <p>Curriculo</p>
+        <input type="file" value="Curriculo">
+    
+    <p>
+        <input type="submit" value="Cadastrar">
+    </p>
+    </form>
+    
+        <script>
+            $('.txtTelefone').mask('(00)00000-0000');
+            $('.txtCPF').mask('000.000.000-00');
+            $('.txtCEP').mask('00000-000')
+            
+            
+
+    function menuShow(){
+        let menuMobile = document.querySelector('.mobile-menu');
+        if (menuMobile.classList.contains('open')){
+            menuMobile.classList.remove('open');
+            document.querySelector('.icon').src = "imgsFormEmpresa/logio.png";
+        } else {
+            menuMobile.classList.add('open');
+            document.querySelector('.icon').src = "imgsFormEmpresa/logio.png";
+        }
+    }
+          </script>
+</body>
+</html>

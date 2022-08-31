@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="estiloProdutos.css">
+    <script src="jquery/jquery-3.6.0.min.js"></script>    
+    <script src="jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="imgsFormProdutos/6095215353a8bf00040ff3a6.png">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"> <a href="inicio.html" class="nav-link">Home</a></li>
+                </ul>
+            </div>
+            <div class="login-button"><button><a href="login.html">Entrar</a></button>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class ="icon" src="imgsFormProdutos/logio.png"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"> <a href="inicio.html" class="nav-link">Home</a></li>
+            </ul>         
+         <div class="login-button"><button> <a href="login.html">Entrar</a></button>
+        </div>
+        </div>    
+    </header>
+    <form>
+        <p>Tipo do Produto
+        </p>
+        
+            <select text="TipoProduto" id="Produtos">  
+                <option value="false"></option>
+                <option value="value1">Skin</option>
+                <option value="value3">Baú</option>
+                <option value="value4">Capsúla</option>
+                <option value="value5">RP</option>       
+            </select>
+
+    <p>Nome da Skin
+    </p>
+    <p><input type="text" name="" id="" class="txtNomeSkin"
+            placeholder="Alistar Negro"></p>
+        
+    <p>Raridade da Skin</p>
+    
+    <select text="TipoProduto" id="Produtos">
+        <option value="false"></option>
+        <option value="value1">Economica</option>
+        <option value="value2">Comun</option>
+        <option value="value3">Épica</option>
+        <option value="value3">Lendária</option>
+        <option value="value4">Mítica</option>
+        <option value="value5">Ultimate</option>       
+    </select>
+    
+    <p>Campeão</p>
+    
+    <select text="TipoProduto" id="Produtos">
+        <option value="false"></option>
+        <option value="value1">Alistar</option>
+        <option value="value2">Annie</option>
+        <option value="value3">Ashe</option>
+        <option value="value5">Ezreal</option>  
+        <option value="value3">Fiddlesticks</option>
+        <option value="value5">Katarina</option>  
+        <option value="value4">Kayle</option>
+        <option value="value5">Lux</option>  
+        <option value="value5">Master Yi</option>
+        <option value="value5">Miss Fortune</option>    
+        <option value="value5">Morgana</option> 
+        <option value="value5">Mordekaiser</option>  
+        <option value="value5">Nidalee</option>              
+        <option value="value5">Nocturne</option>
+        <option value="value5">Nunu</option>              
+        <option value="value5">Ryze</option> 
+        <option value="value5">Samira</option>         
+        <option value="value5">Twisted Fate</option>   
+        <option value="value5">Udyr</option>     
+        <option value="value5">Yummi</option> 
+               
+    </select>
+
+
+    <p>Tipo do Baú
+    </p>
+    
+        <select text="TipoProduto" id="Produtos">
+            <option value="false"></option>
+            <option value="value1">Mestre Artesão</option>
+            <option value="value2">Baú hextec</option>                   
+        </select>
+
+    <p>Quantidade
+    </p>
+
+        <select number="Qntd" id="qntdP">
+            <option value="false"></option>
+            <script>
+                for(qntd=1;qntd<=20;qntd++){
+                document.write("<option value="+qntd+">"+qntd+"</option>");
+                }
+            </script>
+
+        </select>
+
+        <p>Quantidade de RP</p>
+    
+        <select text="QuantidadeRP" id="qntdRP">
+            <option value="false"></option>
+            <option value="value1">650 RP</option>
+            <option value="value2">1350 RP</option>
+            <option value="value3">2600 RP</option>
+            <option value="value3">4550 RP</option>
+            <option value="value4">6500 RP</option>
+            <option value="value5">13000 RP</option>       
+        </select>
+    
+    <p>Lançamento
+    </p>
+    
+        <select number="Lanc" id="LancS">
+            <option value="false"></option>
+            <script>
+                for(lanc=2010;lanc<=2022;lanc++){
+                document.write("<option value="+lanc+">"+lanc+"</option>");
+                }
+            </script>
+
+        </select>
+    
+    <p>Código do Produto
+    </p>
+    <p><input type="text" name="txtCod" id="" class="txtCod"
+    placeholder="A0A0-A0A0-A0A0-A0A0"></p>
+
+    <p>Imagem</p>
+    <input type="file" value="Curriculo">
+
+    <p>
+        <input type="button" value="Cadastrar">
+    </p>
+
+ 
+    
+</form>
+
+
+    
+        <script>
+            $('.txtCod').mask('AAAA-AAAA-AAAA-AAAA');
+            $('.txtCPF').mask('000.000.000-00');
+            $('.txtCEP').mask('00000-000')
+            
+
+    function menuShow(){
+        let menuMobile = document.querySelector('.mobile-menu');
+        if (menuMobile.classList.contains('open')){
+            menuMobile.classList.remove('open');
+            document.querySelector('.icon').src = "imgsFormProdutos/logio.png";
+        } else {
+            menuMobile.classList.add('open');
+            document.querySelector('.icon').src = "imgsFormProdutos/logio.png";
+        }
+    }
+        </script>
+</body>
+</html>
